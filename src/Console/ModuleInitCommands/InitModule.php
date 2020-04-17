@@ -69,7 +69,7 @@ class InitModule extends Command
             exec('php artisan make:service ' . $_module . ' ' . $_module . ' true');
             $this->comment('初始化Service完成');
             $this->comment('开始初始化Controller');
-            exec('php artisan make:controller ' . $_module . ' ' . $_module . ' true');
+            exec('php artisan make:controllers ' . $_module . ' ' . $_module . ' true');
             $this->comment('初始化Controller完成');
             $this->comment('开始初始化ServiceProvider');
             exec('php artisan make:service_provider ' . $_module);

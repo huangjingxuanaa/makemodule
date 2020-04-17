@@ -14,7 +14,7 @@ class MakeControllerCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:controller';
+    protected $name = 'make:controllers';
     protected $signature = 'make:controller {name} {module?} {init?}';
 
     /**
@@ -22,7 +22,7 @@ class MakeControllerCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new controller class';
+    protected $description = 'Create a new controllers class';
 
     /**
      * The type of class being generated.
