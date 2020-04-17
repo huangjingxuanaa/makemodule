@@ -1,0 +1,23 @@
+<?php
+
+
+namespace DummyNamespace;
+
+use App\Modules\Commons\Models\PaginateQueryModel;
+use DummyRepositoryNamespace;
+
+class DummyClass
+{
+    private $_repository;
+
+    public function __construct(DummyRepository $repository)
+    {
+        $this->_repository = $repository;
+    }
+
+    public function page(PaginateQueryModel $paginateQueryModel, array $conditions)
+    {
+        return $this->_repository->page($paginateQueryModel,$conditions);
+    }
+
+}

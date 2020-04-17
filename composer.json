@@ -1,0 +1,24 @@
+{
+    "name": "xuan/makemodule",
+    "description": "Make module is auto create module files include repositories models services controllers and providers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xuan",
+            "email": "237383368@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Xuan\\Makemodule\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel": {
+            "providers": [
+                "Xuan\\Makemodule\\MakeModuleServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<?php
+
+
+namespace DummyNamespace;
+
+
+use App\Http\Controllers\Controller;
+use DummyServiceNamespace;
+use App\Modules\Commons\Requests\BasePageRequest;
+
+class DummyClass extends Controller
+{
+    private $_service;
+
+    public function __construct(DummyService $service)
+    {
+        $this->_service = $service;
+    }
+
+    public function page(BasePageRequest $request)
+    {
+        return $this->_service->page(
+            $request->getPageQueryModel(),
+            $request->get('conditions') ?? []
+        );
+    }
+}

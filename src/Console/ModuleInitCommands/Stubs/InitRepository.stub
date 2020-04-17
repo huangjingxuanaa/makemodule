@@ -1,0 +1,30 @@
+<?php
+
+
+namespace DummyNamespace;
+
+use App\Modules\Commons\Models\PaginateQueryModel;
+use EloquentNamespace;
+
+class DummyClass
+{
+    private $_eloquent;
+
+    public function __construct(EloquentClass $eloquent)
+    {
+        $this->_eloquent = $eloquent;
+    }
+
+    public function page(PaginateQueryModel $paginateQueryModel, array $conditions)
+    {
+        return $this->_eloquent
+            ->newQuery()
+            ->filterQuery($conditions)
+            ->jsonPaginate($paginateQueryModel);
+    }
+
+    public function getById(string $id)
+    {
+        return $this->_eloquent->newQuery()->where('_id', $id)->first();
+    }
+}

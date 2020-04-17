@@ -1,0 +1,14 @@
+<?php
+
+
+namespace DummyNamespace;
+
+
+use App\Modules\Commons\Models\BaseMongo;
+
+class DummyClass extends BaseMongo
+{
+    protected $guarded = [];
+    protected $searchable = ['*'];
+    protected $collection = '';
+}

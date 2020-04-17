@@ -1,0 +1,13 @@
+<?php
+
+
+namespace DummyNamespace;
+
+
+use App\Modules\Commons\Providers\BaseServiceProvider;
+
+class DummyClass extends BaseServiceProvider
+{
+    protected $module = 'DummyModule';
+    protected $namespace = 'DummyController';
+}
