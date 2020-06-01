@@ -4,11 +4,11 @@
 namespace DummyNamespace;
 
 
-use App\Modules\Commons\Models\BaseMongo;
+use App\Modules\Commons\Models\BaseModel;
 
-class DummyClass extends BaseMongo
+class DummyClass extends BaseModel
 {
     protected $guarded = [];
     protected $searchable = ['*'];
-    protected $collection = '';
+    protected $table = '';
 }

@@ -5,8 +5,9 @@ namespace DummyNamespace;
 
 
 use App\Modules\Commons\Providers\BaseServiceProvider;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
-class DummyClass extends BaseServiceProvider
+class DummyClass extends BaseServiceProvider implements DeferrableProvider
 {
     protected $module = 'DummyModule';
     protected $namespace = 'DummyController';
