@@ -57,7 +57,7 @@ class InitModule extends Command
             exec('mkdir  ' . self::MODULE_PATH . $_module . '/Models/');
             exec('mkdir  ' . self::MODULE_PATH . $_module . '/Controllers/');
             exec('mkdir  ' . self::MODULE_PATH . $_module . '/Providers/');
-            exec('touch ' . self::MODULE_PATH . $_module . '/routes.php');
+            exec('touch ' . self::MODULE_PATH . $_module . '/routes.php && echo <?php >>' . self::MODULE_PATH . $_module . '/routes.php');
             $this->comment('模块文件夹创建完成，开始初始化类');
             $this->comment('开始初始化Model');
             exec('php artisan make:eloquent ' . $_module);
